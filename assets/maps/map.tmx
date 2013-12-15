@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<map version="1.0" orientation="orthogonal" width="100" height="100" tilewidth="24" tileheight="24">
+ <tileset firstgid="1" name="tileset" tilewidth="24" tileheight="24">
+  <image source="../graphics/tileset.png" width="264" height="72"/>
+ </tileset>
+ <layer name="floor" width="100" height="100">
+  <data encoding="base64" compression="zlib">
+   eJzt10FuwjAQBdDZQHeoQtBNqQT3vyReNKpjSJ0UElzlPWk2DhLIH884m4jYpnqLvs33+nbgOfN4T7VLtR9Y3w08Zx61PI6pTqm+Fv5da9Xt+zn6/emSrT+rV+mBdWVfulfn6O/jUNX2Vw+sy/vSR9Sz+a1q+9t912Hk59foM37mQ/7/7ebGlIzG5uF8jJPv1/7O2qN97RLymOLRPJ7d39au6135/VYebZFHW/Iz85cq7wPHuD2DLMedannle7c71WtNmTHymJ882lLmkc/ssszw+ZnZbZFHW+TRlvKd0YwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACA/+kKZWQTsg==
+  </data>
+ </layer>
+ <layer name="items" width="100" height="100">
+  <data encoding="base64" compression="zlib">
+   eJztziENAAAIADAkKegfkwIIHBv7EzwCAPimrgMAS3kdAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACAQQN+SgAn
+  </data>
+ </layer>
+ <layer name="walls" width="100" height="100" visible="0">
+  <data encoding="base64" compression="zlib">
+   eJzt18GKgzAQBuC5tL0ugntpC/r+L7keLI1pNbitNst+HwxCLEXmx0k8RMRxqFNMHcb148x9tvE1XpuZ9Zi5zzZKebRDXYa67vZE/9ut711M51OfrL9rVpmBZflceqaLaR/nqtRfM7AsnUvfL/5Xqb/yKDvHfX9I+9WO1zUZyeO90n41T9ZKulieZ332e3ksezWPteSx7Da70vOtPOoij7qk78xvKj8PtPH4DrIfZ6r95d/dzlSftWaPkcf25FGXPI90z87LHr49e3Zd5FEXedQl/2a0RwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAMDf9AOOSAni
+  </data>
+ </layer>
+ <objectgroup name="objects" width="100" height="100">
+  <object x="0" y="0" width="24" height="168"/>
+  <object x="24" y="0" width="48" height="24"/>
+  <object x="48" y="24" width="24" height="72"/>
+  <object x="144" y="168" width="24" height="72"/>
+  <object x="72" y="168" width="24" height="72"/>
+  <object x="216" y="96" width="264" height="24"/>
+  <object x="240" y="24" width="24" height="48"/>
+  <object x="144" y="0" width="120" height="24"/>
+  <object x="72" y="72" width="96" height="24"/>
+  <object x="144" y="24" width="24" height="48"/>
+  <object x="192" y="48" width="48" height="48"/>
+  <object x="144" y="144" width="72" height="24"/>
+  <object x="24" y="144" width="24" height="24"/>
+  <object x="48" y="120" width="48" height="48"/>
+  <object x="96" y="216" width="48" height="24"/>
+  <object x="192" y="264" width="408" height="24"/>
+  <object x="408" y="312" width="192" height="24"/>
+  <object x="408" y="480" width="120" height="24"/>
+  <object x="672" y="264" width="96" height="24"/>
+  <object x="456" y="168" width="216" height="24"/>
+  <object x="648" y="72" width="120" height="24"/>
+  <object x="744" y="96" width="24" height="168"/>
+  <object x="408" y="336" width="24" height="144"/>
+  <object x="576" y="288" width="24" height="24"/>
+  <object x="456" y="120" width="24" height="48"/>
+  <object x="648" y="96" width="24" height="72"/>
+  <object x="504" y="408" width="24" height="72"/>
+  <object x="672" y="288" width="24" height="96"/>
+  <object x="192" y="168" width="24" height="96"/>
+  <object type="spawn" x="36" y="36" width="12" height="12"/>
+  <object type="monster" x="225" y="35" width="12" height="12"/>
+  <object type="spawn" x="456" y="437" width="12" height="12"/>
+  <object type="spawn" x="318" y="217" width="12" height="12"/>
+  <object x="504" y="384" width="192" height="24"/>
+ </objectgroup>
+</map>
