@@ -15,13 +15,29 @@ class RectEntity extends Entity {
         //occluder = new ShadowSegment(x, y);
         //occluder.x = x;
         //occluder.y = y;
-        var seg = new ShadowSegment( x, y );
-        seg.add( new PointInt(0,0) );
-        seg.add( new PointInt(w,0) );
-        seg.add( new PointInt(w,h) );
-        seg.add( new PointInt(0,h) );
-        occluder = seg;
+
+        //obj.isClosed = true;
+
+        //engine.addOccluder( obj);
+
+        /*/
+        occluder = new ShadowSegment( Std.int( Math.random() * 500), Std.int( Math.random() * 500));
+        occluder.add( new PointInt( -5, -5));
+        occluder.add( new PointInt( 5, -5));
+        occluder.add( new PointInt( 5, 5));
+        occluder.add( new PointInt( -5, 5));
+
+        occluder.isClosed = true;
+        /*/
+        occluder = new ShadowSegment( Std.int(x+w/2), Std.int(y+h/2) );
+        occluder.add( new PointInt(Std.int(-w/2),Std.int(-h/2)) );
+        occluder.add( new PointInt(Std.int(w/2),Std.int(-h/2)) );
+        occluder.add( new PointInt(Std.int(w/2),Std.int(h/2)) );
+        occluder.add( new PointInt(Std.int(-w/2),Std.int(h/2)) );
+        occluder.isClosed = true;
+        /*/
+        /*/
     }
 
-    public var occluder : ILightOccluder;
+    public var occluder : ShadowSegment;
 }

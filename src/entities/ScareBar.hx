@@ -9,13 +9,12 @@ class ScareBar extends Entity {
         super( x, y );
         _player = p;
         _image = new Image( "graphics/redtest.png" );
-        _image.scrollX = 0;
-        _image.scrollY = 0;
+        _image.scrollX = _image.scrollY = 0;
     }
 
     public override function update() {
         super.update();
-        _image.scaledWidth = _player.scared * 10;
+        _image.scaledWidth = _player.scared * 10 + 2;
     }
 
     private var _player : Player;

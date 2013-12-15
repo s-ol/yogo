@@ -29,6 +29,10 @@ class Enemy extends Entity {
 
         var player = cast(HXP.scene,MainScene).player;
 
+        if ( distanceFrom( player, true ) < 2 ) {
+            player.kill();
+        }
+
         if ( HXP.scene.collideLine( "walls", Std.int(x), Std.int(y), Std.int(player.x), Std.int(player.y) ) == null ) {
             moveTowards( player.x, player.y, 1.5, "walls" );
             seen = true;
@@ -42,6 +46,7 @@ class Enemy extends Entity {
             _frames++;
         } else
             _frames = 0;
+
         super.update();
     }
 

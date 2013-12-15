@@ -5,20 +5,15 @@
  </tileset>
  <layer name="floor" width="100" height="100">
   <data encoding="base64" compression="zlib">
-   eJzt10FuwjAQBdDZQHeoQtBNqQT3vyReNKpjSJ0UElzlPWk2DhLIH884m4jYpnqLvs33+nbgOfN4T7VLtR9Y3w08Zx61PI6pTqm+Fv5da9Xt+zn6/emSrT+rV+mBdWVfulfn6O/jUNX2Vw+sy/vSR9Sz+a1q+9t912Hk59foM37mQ/7/7ebGlIzG5uF8jJPv1/7O2qN97RLymOLRPJ7d39au6135/VYebZFHW/Iz85cq7wPHuD2DLMedannle7c71WtNmTHymJ882lLmkc/ssszw+ZnZbZFHW+TRlvKd0YwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACA/+kKZWQTsg==
+   eJzt2NtO3DAQAFDTFlAfaCskEL1Ju///k7VVLGaNnXWARSJ7jjQPm811xpk4uUwpXeW4TocuH5dfDf7nNH7kuMhxO1h+Mfif0zhWj7scf3L8fcdzOud7s+Z9lw5zsA/L3yofs3ku5/Qpx+ccX9L/sdJuu9V6tX2p5qFGyccujXOxJi+9PI/Wu8nxLcf3x/Xitu35bamXxr50n57yEKPNQS9m8tLLcxHH/vVgvbgsRtzPFvxOT8+Hes3lGutzY1Sjl+RlVI869mtNz7keUazHbbNsph67tNzP9mlcj5uwj956ZZ2HwXG3XI9yzb/S+nrM9rVeHuNx63OsrUe5j+87x9xyPWrvivPbNfVYEzGP8bhtj4z33f7Ifs5BHbs/XxExf3VZvAd7x5wdA+dWj3bsro12rN+l5/fg0vwq1rAXS3XludGcql1naX4Va9iL9/x28BEsvTuP5lTRzPyKeaN356U5Vbv9sflV29MYm+33o15/bH5Ve1j5vbXvI6ewpt/P9Pp2f7t0ONdVj2Uzz+zX7K/2sPZdlb5T1KN+Gyn5b+8386ll8Z3xLcZvfZ58TfL/Eu3zWP4AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAADgY/oHv0MhHQ==
   </data>
  </layer>
- <layer name="items" width="100" height="100">
+ <layer name="items" width="100" height="100" visible="0">
   <data encoding="base64" compression="zlib">
-   eJztziENAAAIADAkKegfkwIIHBv7EzwCAPimrgMAS3kdAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACAQQN+SgAn
+   eJztzjEKwCAABEFL0Sro/9+a/MAmcKIzsP2WAgBnGemBS8z0AEtPegAA4DDtq6cnAH5S0wMAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAALC5F1pQAFY=
   </data>
  </layer>
- <layer name="walls" width="100" height="100" visible="0">
-  <data encoding="base64" compression="zlib">
-   eJzt18GKgzAQBuC5tL0ugntpC/r+L7keLI1pNbitNst+HwxCLEXmx0k8RMRxqFNMHcb148x9tvE1XpuZ9Zi5zzZKebRDXYa67vZE/9ut711M51OfrL9rVpmBZflceqaLaR/nqtRfM7AsnUvfL/5Xqb/yKDvHfX9I+9WO1zUZyeO90n41T9ZKulieZ332e3ksezWPteSx7Da70vOtPOoij7qk78xvKj8PtPH4DrIfZ6r95d/dzlSftWaPkcf25FGXPI90z87LHr49e3Zd5FEXedQl/2a0RwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAMDf9AOOSAni
-  </data>
- </layer>
- <objectgroup name="objects" width="100" height="100">
+ <objectgroup name="objects" width="100" height="100" visible="0">
   <object x="0" y="0" width="24" height="168"/>
   <object x="24" y="0" width="48" height="24"/>
   <object x="48" y="24" width="24" height="72"/>
@@ -50,8 +45,63 @@
   <object x="192" y="168" width="24" height="96"/>
   <object type="spawn" x="36" y="36" width="12" height="12"/>
   <object type="monster" x="225" y="35" width="12" height="12"/>
-  <object type="spawn" x="456" y="437" width="12" height="12"/>
-  <object type="spawn" x="318" y="217" width="12" height="12"/>
+  <object type="monster" x="318" y="217" width="12" height="12"/>
   <object x="504" y="384" width="192" height="24"/>
+  <object type="monster" x="456" y="432" width="12" height="12"/>
+  <object type="teleporter" x="696" y="120" width="24" height="24">
+   <properties>
+    <property name="dx" value="39"/>
+    <property name="dy" value="4"/>
+   </properties>
+  </object>
+  <object type="monster" x="1039" y="129" width="12" height="12"/>
+  <object type="giveitem" x="816" y="144" width="24" height="24">
+   <properties>
+    <property name="item" value="gold"/>
+   </properties>
+  </object>
+  <object type="giveitem" x="816" y="288" width="48" height="24">
+   <properties>
+    <property name="item" value="gun"/>
+   </properties>
+  </object>
+  <object x="888" y="48" width="120" height="24"/>
+  <object x="1032" y="72" width="168" height="24"/>
+  <object x="984" y="288" width="216" height="72"/>
+  <object x="792" y="120" width="72" height="24"/>
+  <object x="792" y="216" width="120" height="72"/>
+  <object x="792" y="360" width="120" height="24"/>
+  <object x="888" y="456" width="48" height="24"/>
+  <object x="984" y="432" width="120" height="24"/>
+  <object x="1080" y="360" width="24" height="72"/>
+  <object x="1176" y="96" width="24" height="192"/>
+  <object x="984" y="72" width="48" height="168"/>
+  <object x="1032" y="192" width="24" height="48"/>
+  <object x="864" y="288" width="48" height="48"/>
+  <object x="984" y="360" width="48" height="48"/>
+  <object x="864" y="120" width="48" height="72"/>
+  <object x="888" y="72" width="24" height="48"/>
+  <object x="792" y="144" width="24" height="72"/>
+  <object x="792" y="288" width="24" height="72"/>
+  <object x="888" y="384" width="24" height="72"/>
+  <object x="960" y="456" width="48" height="24"/>
+  <object type="door" x="936" y="456" width="24" height="24">
+   <properties>
+    <property name="cx" value="0"/>
+    <property name="cy" value="-1"/>
+    <property name="key" value="key_1"/>
+   </properties>
+  </object>
+  <object type="giveitem" x="1032" y="360" width="24" height="24">
+   <properties>
+    <property name="item" value="key_1"/>
+   </properties>
+  </object>
+  <object x="24" y="24">
+   <polyline points="0,0 24,0 24,72 144,72 144,0 216,0 216,24 168,24 168,72 192,72 192,96 432,96 432,168 648,168 648,72 720,72 720,240 648,240 648,360 480,360 480,456 408,456 408,312 576,312 576,240 192,240 192,120 120,120 120,192 72,192 72,96 24,96 24,120 0,120 0,0"/>
+  </object>
+  <object x="912" y="72">
+   <polyline points="0,0 72,0 72,168 144,168 144,120 120,120 120,24 264,24 264,216 72,216 72,336 120,336 120,288 168,288 168,360 72,360 72,384 0,384 0,288 -96,288 -96,216 -48,216 -48,264 0,264 0,144 -96,144 -96,72 -48,72 -48,120 0,120 0,0"/>
+  </object>
  </objectgroup>
 </map>

@@ -95,10 +95,5 @@ class ShadowCircle implements ILightOccluder
 	}
 	
 	public var radius(get_radius, set_radius):Int;
-
-    public function callback( light:Light):Void
-    {
-        return;
-    }
 	
 }

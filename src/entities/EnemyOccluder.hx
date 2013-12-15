@@ -11,7 +11,7 @@ class EnemyOccluder extends ShadowCircle implements ILightOccluder
         this.parent = parent;
     }
 
-	public override function callback( light:Light ):Void
+	public function callback( light:Light ):Void
 	{
         parent.seen = true;
     }

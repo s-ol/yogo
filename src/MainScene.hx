@@ -1,18 +1,17 @@
-import entities.RectEntity;
-import entities.RectEntity;
-import com.pdev.lighting.occlusion.ILightOccluder;
-import com.pdev.lighting.occlusion.ShadowRect;
-import com.haxepunk.tmx.TmxObject;
 import com.pdev.lighting.PointInt;
+import entities.Door;
+import entities.GiveItem;
+import entities.Teleporter;
+import flash.geom.Point;
+import com.pdev.lighting.Light;
+import entities.RectEntity;
+import com.haxepunk.tmx.TmxObject;
 import com.pdev.lighting.occlusion.ShadowSegment;
-import com.haxepunk.graphics.Backdrop;
 import entities.ScareBar;
 import entities.Enemy;
-import entities.GraphicsEntity;
 import flash.display.Bitmap;
 import com.pdev.tools.LightTool;
 import com.pdev.lighting.LightEngine;
-import com.pdev.lighting.DirectionalLight;
 import com.pdev.lighting.occlusion.ShadowCircle;
 import com.haxepunk.HXP;
 import com.haxepunk.Scene;
@@ -41,44 +40,62 @@ class MainScene extends Scene
 
         player = new Player( 10, 20, LightTool.radialLightMap( 600, 600, 1.0 ) );
 
-
+        try {
         for( object in _level.map.getObjectGroup( "objects" ).objects )
         {
             if ( object.type == "spawn" ) {
                 player.x = object.x;
                 player.y = object.y;
             } else if ( object.type == "monster" ) {
-                var enemy = new Enemy( object.x, object.y );
+                var enemy = new Enemy( Std.int(object.x), Std.int(object.y) );
                 _lightEngine.addOccluder( enemy.occluder );
                 add( enemy );
+            } else if ( object.type == "teleporter" ) {
+                add( new Teleporter( Std.int(object.x), Std.int(object.y), Std.parseInt(object.custom.resolve("dx")), Std.parseInt(object.custom.resolve("dy")) ) );
+            } else if ( object.type == "giveitem") {
+                add( new GiveItem( Std.int(object.x), Std.int(object.y), object.custom.resolve("item")));
+            } else if ( object.type == "door") {
+                add( new Door( Std.int(object.x), Std.int(object.y), Std.parseInt(object.custom.resolve("cx")), Std.parseInt(object.custom.resolve("cy")), object.custom.resolve("key")));
             } else {
-                var r:RectEntity = new RectEntity( object.x, object.y, object.width, object.height, "walls" );
-                _lightEngine.addOccluder( r.occluder );
+                var r:RectEntity = new RectEntity( Std.int(object.x), Std.int(object.y), Std.int(object.width), Std.int(object.height), "walls" );
                 add( r );
             }
+            trace("object");
         }
-        trace( "asd" );
 
-        add( _level );
+
+        trace("asd");
+        for ( line in _level.map.getObjectGroup( "objects" ).polylines )
+        {
+            var occ:ShadowSegment = new ShadowSegment();
+            for ( point in line.points )
+                occ.add( new PointInt( Std.int(point.x), Std.int(point.y) ) );
+            occ.isClosed = false;
+            _lightEngine.addOccluder( occ );
+            trace("line");
+        }
+        trace("bsf");
+
+        add( _level ); } catch ( e:Dynamic ) trace( e );
 
         _lightCanvas = new BitmapData( HXP.width, HXP.height, true, 0xff000000 );
         HXP.stage.addChild( new Bitmap( _lightCanvas ) );
 
         _lightEngine.addLight( player.light );
         add( player );
-
-        add( new ScareBar( 20, HXP.height - 30, player ) );
-
 	}
 
     public override function update()
     {
         super.update();
-        //HXP.setCamera( player.x - HXP.halfWidth, player.y - HXP.halfWidth );
         HXP.camera.x = player.x - HXP.halfWidth;
         HXP.camera.y = player.y - HXP.halfHeight;
         _lightEngine.render( _lightCanvas, Math.round(player.x - HXP.halfWidth), Math.round(player.y - HXP.halfHeight) );
-        //_lightEngine.render( _lightcanvas, 0, 0 );
+    }
+
+    public function replaceLight( light:Light, newLight:Light ) {
+        _lightEngine.removeLight( light );
+        _lightEngine.addLight( newLight );
     }
 
     public  var player          : Player;

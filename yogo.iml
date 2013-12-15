@@ -16,6 +16,7 @@
     <orderEntry type="library" name="HaxePunk-2,4,2" level="application" />
     <orderEntry type="library" name="polygonal-ds-1,4,1" level="application" />
     <orderEntry type="library" name="HaxePunkTmx-1,0,2" level="application" />
+    <orderEntry type="library" name="nme-4,0,2" level="application" />
   </component>
 </module>
 
