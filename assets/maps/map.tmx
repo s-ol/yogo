@@ -5,17 +5,17 @@
  </tileset>
  <layer name="floor" width="100" height="100">
   <data encoding="base64" compression="zlib">
-   eJzt2NtO3DAQAFDTFlAfaCskEL1Ju///k7VVLGaNnXWARSJ7jjQPm811xpk4uUwpXeW4TocuH5dfDf7nNH7kuMhxO1h+Mfif0zhWj7scf3L8fcdzOud7s+Z9lw5zsA/L3yofs3ku5/Qpx+ccX9L/sdJuu9V6tX2p5qFGyccujXOxJi+9PI/Wu8nxLcf3x/Xitu35bamXxr50n57yEKPNQS9m8tLLcxHH/vVgvbgsRtzPFvxOT8+Hes3lGutzY1Sjl+RlVI869mtNz7keUazHbbNsph67tNzP9mlcj5uwj956ZZ2HwXG3XI9yzb/S+nrM9rVeHuNx63OsrUe5j+87x9xyPWrvivPbNfVYEzGP8bhtj4z33f7Ifs5BHbs/XxExf3VZvAd7x5wdA+dWj3bsro12rN+l5/fg0vwq1rAXS3XludGcql1naX4Va9iL9/x28BEsvTuP5lTRzPyKeaN356U5Vbv9sflV29MYm+33o15/bH5Ve1j5vbXvI6ewpt/P9Pp2f7t0ONdVj2Uzz+zX7K/2sPZdlb5T1KN+Gyn5b+8386ll8Z3xLcZvfZ58TfL/Eu3zWP4AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAADgY/oHv0MhHQ==
+   eJzt28tuwjAQhWGvWCJUqV2xcN//JUuqRjLTGXt8CQnO/0lehEJI58SxcyEEHMnno31l/nb9a7eXbdG5fQS71tdXbgh+HTWPpW/eg913Z7XkcU3aPWnL8uh6eOu8ble6r6yfTdtsecn+sdbhkjRZA61566LV2fs+ue/MOK5pecj/UatDa12sPOS84qx5xEf7Tpb3ysPqp+lrseN731UMz/ksPHnIscdqVh2X770o6yztG7PnofHmUdNaxg9tW86YRwzP43ttS+u3vib7oJTWXetfZ86jl3dOpX1GzvVkK+WK/zx5eOZXGMNTW8/8Cn7auXNpTpWKwTe/go/neF9zrLeul8x2fWQro48v1vk5/cVnqzzkXJn5lM/oPOLf+qh/mxjG77/cD9tfOk9Lz80Zx/dhXStjHN8HeRwLeRwLeWyn9OyCdo2l5n4XY3yd0jlJ730u+kwdbx65e1favaz1dfKo48nDuh97M5Zzn51N7pp5SysdV8gjb4vnFsij3ag8vPc9yCNvRB4tzyxY811tOX0feWyTB/NdXa4+3uesWvLIPa9lff+Z86h9Ntd7Hm2NAZ5nEM88ftTm0TO/0tZDHn159MyvtO0gj/Y8ascP8rBtnYc8/8/V2pOHHKtmu967dR7e3zfV5DHz/DcG/Zqq95kRuc/K/XVdf2ls8eThXde70/qH16jfysQwf529evKIgTqO1pMHAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABH8QP5KDRK
   </data>
  </layer>
- <layer name="items" width="100" height="100" visible="0">
+ <layer name="items" width="100" height="100">
   <data encoding="base64" compression="zlib">
-   eJztzjEKwCAABEFL0Sro/9+a/MAmcKIzsP2WAgBnGemBS8z0AEtPegAA4DDtq6cnAH5S0wMAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAALC5F1pQAFY=
+   eJzt29FKwzAUAND6UHTqiyj4UFT8/590L9MsNGvWpd62nAOBbYTsQpo0zU27jq3oj+U9KcR6jg6AM/ojxl33NyfdJ79/xYTz6zX4/9eiTz4P3XkftfDWuD3ae4kOgFlaj9W9GirrfUy0cbqPfd4cEWzDaY7pL9Yal4+7S+OL5c3pQ273eCxP0UFAgNo53/qqvSXn+4cF24YtSvc6rXVjHaIDgBWLzr8AAPOUnjFq812wJ/l+V567KuWy5NHZulb7Tc4CsRfy3f9jqTOepfMjQ+F7Xg+i1c5Bc9agY23n7dTUYZznaCizvoI2ptasU++ruVet157Pyh2Sci3X7P59RwcQzNl/AAAAAAAAAAAAAAAAAAAAAAAAAAAAoKUfGSkFbg==
   </data>
  </layer>
- <objectgroup name="objects" width="100" height="100" visible="0">
-  <object x="0" y="0" width="24" height="168"/>
-  <object x="24" y="0" width="48" height="24"/>
+ <objectgroup name="objects" width="100" height="100">
+  <object x="-24" y="24" width="24" height="168"/>
+  <object x="0" y="0" width="48" height="24"/>
   <object x="48" y="24" width="24" height="72"/>
   <object x="144" y="168" width="24" height="72"/>
   <object x="72" y="168" width="24" height="72"/>
@@ -26,7 +26,7 @@
   <object x="144" y="24" width="24" height="48"/>
   <object x="192" y="48" width="48" height="48"/>
   <object x="144" y="144" width="72" height="24"/>
-  <object x="24" y="144" width="24" height="24"/>
+  <object x="0" y="192" width="48" height="24"/>
   <object x="48" y="120" width="48" height="48"/>
   <object x="96" y="216" width="48" height="24"/>
   <object x="192" y="264" width="408" height="24"/>
@@ -51,27 +51,27 @@
   <object type="teleporter" x="696" y="120" width="24" height="24">
    <properties>
     <property name="dx" value="39"/>
-    <property name="dy" value="4"/>
+    <property name="dy" value="5"/>
    </properties>
   </object>
   <object type="monster" x="1039" y="129" width="12" height="12"/>
   <object type="giveitem" x="816" y="144" width="24" height="24">
    <properties>
-    <property name="item" value="gold"/>
+    <property name="item" value="some gold"/>
    </properties>
   </object>
   <object type="giveitem" x="816" y="288" width="48" height="24">
    <properties>
-    <property name="item" value="gun"/>
+    <property name="item" value="some gold"/>
    </properties>
   </object>
   <object x="888" y="48" width="120" height="24"/>
   <object x="1032" y="72" width="168" height="24"/>
-  <object x="984" y="288" width="216" height="72"/>
+  <object x="984" y="288" width="192" height="72"/>
   <object x="792" y="120" width="72" height="24"/>
   <object x="792" y="216" width="120" height="72"/>
   <object x="792" y="360" width="120" height="24"/>
-  <object x="888" y="456" width="48" height="24"/>
+  <object x="840" y="456" width="96" height="24"/>
   <object x="984" y="432" width="120" height="24"/>
   <object x="1080" y="360" width="24" height="72"/>
   <object x="1176" y="96" width="24" height="192"/>
@@ -84,24 +84,113 @@
   <object x="792" y="144" width="24" height="72"/>
   <object x="792" y="288" width="24" height="72"/>
   <object x="888" y="384" width="24" height="72"/>
-  <object x="960" y="456" width="48" height="24"/>
+  <object x="960" y="456" width="96" height="24"/>
   <object type="door" x="936" y="456" width="24" height="24">
    <properties>
-    <property name="cx" value="0"/>
-    <property name="cy" value="-1"/>
-    <property name="key" value="key_1"/>
+    <property name="key" value="a red key"/>
    </properties>
   </object>
   <object type="giveitem" x="1032" y="360" width="24" height="24">
    <properties>
-    <property name="item" value="key_1"/>
+    <property name="item" value="a red key"/>
    </properties>
   </object>
   <object x="24" y="24">
-   <polyline points="0,0 24,0 24,72 144,72 144,0 216,0 216,24 168,24 168,72 192,72 192,96 432,96 432,168 648,168 648,72 720,72 720,240 648,240 648,360 480,360 480,456 408,456 408,312 576,312 576,240 192,240 192,120 120,120 120,192 72,192 72,96 24,96 24,120 0,120 0,0"/>
+   <polyline points="0,0 24,0 24,72 144,72 144,0 216,0 216,24 168,24 168,72 192,72 192,96 432,96 432,168 648,168 648,72 720,72 720,240 648,240 648,360 480,360 480,456 408,456 408,312 576,312 576,240 192,240 192,120 120,120 120,192 72,192 72,96 24,96 24,120 24,168 -24,168"/>
   </object>
-  <object x="912" y="72">
-   <polyline points="0,0 72,0 72,168 144,168 144,120 120,120 120,24 264,24 264,216 72,216 72,336 120,336 120,288 168,288 168,360 72,360 72,384 0,384 0,288 -96,288 -96,216 -48,216 -48,264 0,264 0,144 -96,144 -96,72 -48,72 -48,120 0,120 0,0"/>
+  <object x="3" y="187">
+   <polyline points="-3,5 -3,-163 45,-163"/>
+  </object>
+  <object x="936" y="456">
+   <polyline points="0,0 -24,0 -24,-96 -120,-96 -120,-168 -72,-168 -72,-120 -24,-120 -24,-240 -120,-240 -120,-312 -72,-312 -72,-264 -24,-264 -24,-384 48,-384 48,-216 120,-216 120,-264 96,-264 96,-360 240,-360 240,-168 48,-168 48,-48 96,-48 96,-96 144,-96 144,-24 48,-24 48,0 24,0"/>
+  </object>
+  <object x="960" y="456">
+   <polyline points="0,0 0,24 72,24 72,144 192,144 192,480 288,480 288,552 144,552 144,384 48,384 48,576 -72,576 -72,384 -168,384 -168,552 -312,552 -312,480 -216,480 -216,144 -96,144 -96,24 -24,24 -24,0"/>
+  </object>
+  <object x="792" y="672">
+   <polyline points="0,0 72,0 72,96 0,96 0,0"/>
+  </object>
+  <object x="936" y="672">
+   <polyline points="0,0 24,0 24,96 0,96 0,0"/>
+  </object>
+  <object x="1032" y="672">
+   <polyline points="0,0 72,0 72,96 0,96 0,0"/>
+  </object>
+  <object x="720" y="576" width="144" height="24"/>
+  <object x="1152" y="912" width="120" height="24"/>
+  <object x="1104" y="1008" width="168" height="24"/>
+  <object x="624" y="1008" width="168" height="24"/>
+  <object x="792" y="840" width="96" height="216"/>
+  <object x="1008" y="840" width="96" height="216"/>
+  <object x="1032" y="672" width="72" height="96"/>
+  <object x="792" y="672" width="72" height="96"/>
+  <object x="936" y="672" width="24" height="96"/>
+  <object x="720" y="600" width="24" height="312"/>
+  <object x="1152" y="600" width="24" height="312"/>
+  <object x="528" y="912" width="216" height="24"/>
+  <object x="624" y="936" width="24" height="72"/>
+  <object x="1032" y="480" width="24" height="96"/>
+  <object x="1250" y="919" width="24" height="72"/>
+  <object x="840" y="480" width="24" height="96"/>
+  <object type="giveitem" x="1200" y="960" width="24" height="24">
+   <properties>
+    <property name="item" value="a blue key"/>
+   </properties>
+  </object>
+  <object type="monster" x="696" y="960" width="24" height="24"/>
+  <object type="monster" x="756" y="717" width="24" height="24"/>
+  <object type="giveitem" x="984" y="696" width="24" height="24">
+   <properties>
+    <property name="item" value="some gold"/>
+   </properties>
+  </object>
+  <object type="teleporter" x="936" y="936" width="24" height="24">
+   <properties>
+    <property name="dx" value="10"/>
+    <property name="dy" value="31"/>
+   </properties>
+  </object>
+  <object x="888" y="1032" width="120" height="24"/>
+  <object type="monster" x="585" y="648" width="24" height="24"/>
+  <object x="191" y="1005">
+   <polyline points="0,0 24,0 24,72 -96,72 -96,0 -72,0 -120,0 -120,-312 360,-312 360,-408 432,-408 432,-240 312,-240 312,-168 432,-168 432,-96 312,-96 312,-24 384,-24 384,48 264,48 264,-168 48,-168 48,0 0,0"/>
+  </object>
+  <object x="72" y="672" width="480" height="24"/>
+  <object x="240" y="840" width="216" height="216"/>
+  <object x="216" y="1008" width="24" height="96"/>
+  <object x="72" y="1008" width="24" height="96"/>
+  <object x="96" y="1080" width="120" height="24"/>
+  <object x="432" y="1056" width="168" height="24"/>
+  <object x="48" y="672" width="24" height="360"/>
+  <object x="504" y="768" width="144" height="72"/>
+  <object x="504" y="912" width="24" height="72"/>
+  <object x="528" y="960" width="72" height="24"/>
+  <object x="576" y="984" width="24" height="72"/>
+  <object x="624" y="840" width="24" height="72"/>
+  <object x="624" y="576" width="24" height="192"/>
+  <object x="528" y="576" width="24" height="96"/>
+  <object x="552" y="576" width="72" height="24"/>
+  <object type="giveitem" x="120" y="1032" width="48" height="24">
+   <properties>
+    <property name="item" value="diamonds. You are free now. Sorry, I didn't find a better messaging system."/>
+   </properties>
+  </object>
+  <object type="door" x="120" y="984" width="72" height="24">
+   <properties>
+    <property name="key" value="a blue key"/>
+   </properties>
+  </object>
+  <object type="teleporter" x="240" y="768" width="24" height="24">
+   <properties>
+    <property name="dx" value="39"/>
+    <property name="dy" value="38"/>
+   </properties>
+  </object>
+  <object type="teleporter" x="936" y="96" width="24" height="24">
+   <properties>
+    <property name="dx" value="29"/>
+    <property name="dy" value="6"/>
+   </properties>
   </object>
  </objectgroup>
 </map>

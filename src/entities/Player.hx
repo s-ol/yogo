@@ -1,5 +1,6 @@
 package entities;
 
+import com.haxepunk.Scene;
 import entities.IWalkable;
 import com.pdev.lighting.Light;
 import com.haxepunk.graphics.Image;
@@ -16,7 +17,7 @@ class Player extends Entity {
     {
         super(x, y);
 
-        scared = 0;
+        scared = 1;
         _alive = true;
 
         light = new DirectionalLight( bmpd, 180 );
@@ -28,12 +29,21 @@ class Player extends Entity {
 
         setHitboxTo( graphic );
         type = "player";
+
+        _items = new Array<String>();
     }
 
     public override function update()
     {
-        if ( !_alive )
-            return;
+        if ( !_alive ) {
+            if ( Input.pressed( Key.SPACE ) || Input.mouseDown )
+                HXP.scene = new MenuScene();
+            else
+                return;
+        }
+
+        if ( scared > 10 )
+            kill();
 
         _angle = Math.atan2( Input.mouseY - HXP.halfHeight, Input.mouseX - HXP.halfWidth );
         _sprite.angle = _angle / Math.PI * -180;
@@ -55,7 +65,8 @@ class Player extends Entity {
         light.y = Std.int(y);
         light.rotation = _angle;
 
-        scared /= 1.5;
+        if ( scared > 1 )
+            scared /= 1.01;
 
         var e:IWalkable = cast(collide( "door", x, y ),IWalkable);
         if ( e != null )
@@ -71,25 +82,29 @@ class Player extends Entity {
     }
 
     public function scare( e:Enemy ) : Void {
-        scared += distanceFrom( e ) / 800;
+        if ( _alive )
+            scared *= 1.1;
     }
 
-    public function kill( ) : Void {
+    public function kill() : Void {
         if ( _alive ) {
             _alive = false;
             cast(HXP.scene,MainScene).replaceLight( light, new Light( light.texture, Std.int(x), Std.int(y) ) );
+            var img = new SlideinEntity( new Image( "graphics/gui/spacetorestart.png"), Std.int(HXP.halfWidth), Std.int(HXP.halfHeight), 20, 0, 10 );
+            img.renderTarget = cast(HXP.scene,MainScene).scareBar;
+            HXP.scene.add( img );
         }
     }
 
     public function give( item:String ) : Void {
         _items.push( item );
-        trace( "got " + item );
+        trace( "you found " + item + "!" );
     }
 
     public function has( item:String ) : Bool {
-        if ( _items.filter( function( str:String ):Bool{ return str == item; } ).length > 0 )
-            trace("have " + item);
+        if ( _items.filter( function( str:String ):Bool{ return str == item; } ).length > 0 ) {
             return true;
+        }
         return false;
     }
 

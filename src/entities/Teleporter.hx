@@ -14,7 +14,6 @@ class Teleporter extends Entity implements IWalkable {
     public function hit( ply:Player ) : Void {
         ply.x = dx * 24;
         ply.y = dy * 24;
-        trace( "tele" );
     }
 
     public var dx:Int;

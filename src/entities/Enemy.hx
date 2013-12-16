@@ -1,5 +1,6 @@
 package entities;
 
+import UInt;
 import com.haxepunk.graphics.Spritemap;
 import com.pdev.lighting.occlusion.ShadowCircle;
 import com.haxepunk.Entity;
@@ -35,23 +36,16 @@ class Enemy extends Entity {
 
         if ( HXP.scene.collideLine( "walls", Std.int(x), Std.int(y), Std.int(player.x), Std.int(player.y) ) == null ) {
             moveTowards( player.x, player.y, 1.5, "walls" );
-            seen = true;
-        } else {
-            seen = false;
-        }
+            var light = player.light;
 
-        if ( seen ) {
-            if ( _frames % 20 == 0 )
+            if ( cast(HXP.scene,MainScene).lightCanvas.getPixel( Std.int(x - HXP.camera.x ) , Std.int(y - HXP.camera.y) ) != 256 ) {
                 player.scare( this );
-            _frames++;
-        } else
-            _frames = 0;
+            }
+        }
 
         super.update();
     }
 
     public  var occluder: ShadowCircle;
-    public  var seen    : Bool;
     private var _map    : Spritemap;
-    private var _frames : Int;
 }
