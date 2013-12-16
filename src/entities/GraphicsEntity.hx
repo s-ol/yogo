@@ -1,5 +1,6 @@
 package entities;
 
+import com.haxepunk.graphics.Backdrop;
 import com.haxepunk.utils.Key;
 import com.haxepunk.Scene;
 import com.haxepunk.utils.Input;
