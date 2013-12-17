@@ -53,7 +53,7 @@ class MainScene extends Scene
             } else if ( object.type == "teleporter" ) {
                 add( new Teleporter( Std.int(object.x), Std.int(object.y), Std.parseInt(object.custom.resolve("dx")), Std.parseInt(object.custom.resolve("dy")) ) );
             } else if ( object.type == "giveitem") {
-                add( new GiveItem( Std.int(object.x), Std.int(object.y), object.custom.resolve("item")));
+                add( new GiveItem( Std.int(object.x), Std.int(object.y), object.custom.resolve("item"), object.custom.resolve("message") ));
             } else if ( object.type == "door") {
                 add( new Door( Std.int(object.x), Std.int(object.y), Std.parseInt(object.custom.resolve("cx")), Std.parseInt(object.custom.resolve("cy")), object.custom.resolve("key")));
             } else {

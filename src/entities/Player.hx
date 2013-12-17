@@ -10,6 +10,7 @@ import com.pdev.lighting.DirectionalLight;
 import com.haxepunk.utils.Key;
 import com.haxepunk.utils.Input;
 import com.haxepunk.graphics.Image;
+import com.haxepunk.graphics.Text;
 import com.haxepunk.Entity;
 
 class Player extends Entity {
@@ -90,15 +91,17 @@ class Player extends Entity {
         if ( _alive ) {
             _alive = false;
             cast(HXP.scene,MainScene).replaceLight( light, new Light( light.texture, Std.int(x), Std.int(y) ) );
-            var img = new SlideinEntity( new Image( "graphics/gui/spacetorestart.png"), Std.int(HXP.halfWidth), Std.int(HXP.halfHeight), 20, 0, 10 );
+            var img = new SlideinEntity( new Image( "graphics/gui/spacetorestart.png"), Std.int(HXP.camera.x + HXP.halfWidth), Std.int(HXP.camera.y + HXP.halfHeight), 20, 0, 10 );
             img.renderTarget = cast(HXP.scene,MainScene).scareBar;
             HXP.scene.add( img );
         }
     }
 
-    public function give( item:String ) : Void {
+    public function give( item:String, message:String ) : Void {
         _items.push( item );
-        trace( "you found " + item + "!" );
+        var img = new Entity( Std.int(HXP.camera.x + HXP.halfWidth), Std.int(HXP.camera.y + HXP.halfHeight), new Text( message ) );
+            img.renderTarget = cast(HXP.scene,MainScene).scareBar;
+            HXP.scene.add( img );
     }
 
     public function has( item:String ) : Bool {

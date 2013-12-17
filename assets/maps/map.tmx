@@ -56,7 +56,8 @@
   <object type="monster" x="1039" y="129" width="12" height="12"/>
   <object type="giveitem" x="816" y="144" width="24" height="24">
    <properties>
-    <property name="item" value="some gold"/>
+    <property name="item" value="gold"/>
+    <property name="message" value="+50 gold"/>
    </properties>
   </object>
   <object type="giveitem" x="816" y="288" width="48" height="24">
@@ -86,12 +87,13 @@
   <object x="960" y="456" width="96" height="24"/>
   <object type="door" x="936" y="456" width="24" height="24">
    <properties>
-    <property name="key" value="a red key"/>
+    <property name="key" value="one"/>
    </properties>
   </object>
   <object type="giveitem" x="1032" y="360" width="24" height="24">
    <properties>
-    <property name="item" value="a red key"/>
+    <property name="item" value="one"/>
+    <property name="message" value="you hear a scratching sound"/>
    </properties>
   </object>
   <object x="24" y="24">
@@ -133,7 +135,8 @@
   <object x="840" y="480" width="24" height="96"/>
   <object type="giveitem" x="1200" y="960" width="24" height="24">
    <properties>
-    <property name="item" value="a blue key"/>
+    <property name="item" value="two"/>
+    <property name="message" value="you hear a scratching sound"/>
    </properties>
   </object>
   <object type="monster" x="696" y="960" width="24" height="24"/>
@@ -141,6 +144,7 @@
   <object type="giveitem" x="984" y="696" width="24" height="24">
    <properties>
     <property name="item" value="some gold"/>
+    <property name="message" value="+50 gold"/>
    </properties>
   </object>
   <object type="teleporter" x="936" y="936" width="24" height="24">
@@ -171,12 +175,13 @@
   <object x="552" y="576" width="72" height="24"/>
   <object type="giveitem" x="120" y="1032" width="48" height="24">
    <properties>
-    <property name="item" value="diamonds. You are free now. Sorry, I didn't find a better messaging system."/>
+    <property name="item" value="diamonds"/>
+    <property name="message" value="You found diamonds and are now free!"/>
    </properties>
   </object>
   <object type="door" x="120" y="984" width="72" height="24">
    <properties>
-    <property name="key" value="a blue key"/>
+    <property name="key" value="two"/>
    </properties>
   </object>
   <object type="teleporter" x="240" y="768" width="24" height="24">
@@ -189,6 +194,12 @@
    <properties>
     <property name="dx" value="29"/>
     <property name="dy" value="6"/>
+   </properties>
+  </object>
+  <object type="giveitem" x="816" y="288" width="48" height="24">
+   <properties>
+    <property name="item" value="more gold"/>
+    <property name="message" value="+100 gold"/>
    </properties>
   </object>
  </objectgroup>
